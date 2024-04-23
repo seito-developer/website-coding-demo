@@ -1,34 +1,44 @@
+<% const pointCards = [{
+  headline: "ゼミ形式のカリキュラム",
+  img: {
+    url: "/images/point-1.png",
+    width: "286.5",
+    height: "205.5"
+  },
+  disc: "科学的に効果の高い学習方法を用い、プログラミングはもちろんエンジニアの仕事に必要な実践的なスキル・マインドを包括的に学ぶことができます。"
+}, {
+  headline: "強力な監修・講師陣",
+  img: {
+    url: "/images/point-2.png",
+    width: "195",
+    height: "191"
+  },
+  disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
+}, {
+  headline: "受講者ファースト",
+  img: {
+    url: "/images/point-3.png",
+    width: "285",
+    height: "214"
+  },
+  disc: "受講生様の現在地と目標をヒアリングした上で、お仕事の状況やご家庭の都合など、普段の生活リズムも考慮した上で学習計画をご提案します。"
+}] %>
+
 <section class="point">
-<% if(!point.headline.isNormal) { %>
-    <%- include('../modules/components/_headline.html', { modifier: "headline-primary", main: point.headline.main, sub: point.headline.sub }) %>
-<% } else { %>
-  <%- include('../modules/components/_headline-small.html', { 
-    title: point.headline.main,
-    modifier: false,
-    link: false }) %>
-<% } %>
+<%- include('../modules/components/_headline.html', { 
+  modifier: "headline-primary", 
+  main: "POINT",
+  sub: "3つの特徴"
+}) %>
 
 <ul class="point-list">
-<% if( point.cards ) { %>
-  <% for( let index = 0; index < point.cards.length; index++ ) { %>
+  <% for( let index = 0; index < pointCards.length; index++ ) { %>
     <li>
       <%- include('../modules/components/_card.html', { 
-        headline: point.cards[index].headline, 
-        img: point.cards[index].img, 
-        disc: point.cards[index].disc }) %>
+        headline: pointCards[index].headline, 
+        img: pointCards[index].img, 
+        disc: pointCards[index].disc }) %>
     </li>
   <% } %>
-<% } else { %>
-  <% for( let index = 0; index < point.media.length; index++ ) { %>
-    <li>
-      <%- include('../modules/components/_media.html', { 
-        headline: point.media[index].headline, 
-        img: point.media[index].img, 
-        href: point.media[index].href,
-        disc: point.media[index].disc
-      }) %>
-    </li>
-  <% } %>
-<% } %>
 </ul>
 </section>

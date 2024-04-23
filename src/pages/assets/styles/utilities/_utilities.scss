@@ -18,9 +18,6 @@
   $sp-value: math.div($value, 2);
   .u-mb-#{$index * $spacer} {
     margin-bottom: fn.vw($value);
-    // @media screen and (max-width: cn.$bp-sm){
-    //   margin-bottom: fn.vw($sp-value);
-    // }
   }
   .u-mt-#{$index * $spacer} {
     margin-bottom: fn.vw($value);

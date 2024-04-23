@@ -36,16 +36,5 @@
         }
       }
     }
-
-    // modifiers
-    &.sub-hero-long {
-      .sub-hero-title {
-        > span {
-          &:nth-child(2){
-            font-size: fn.fs(28px);
-          }
-        }
-      }
-    }
   }
 }

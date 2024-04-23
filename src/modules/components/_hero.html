@@ -1,14 +1,18 @@
+<% const heroImages = ["siid/hero-image-1.jpg", "siid/hero-image-2.jpg", "siid/hero-image-3.jpg", "siid/hero-image-4.jpg", "siid/hero-image-5.jpg", "siid/hero-image-6.jpg"]; %>
 <div class="hero js-scroll-animation">
   <div class="hero-inner">
     <h1 class="hero-headline">
-      <%- hero.copy %>
+      <span class="hero-headline-text">
+        <span>一生使えるDXスキル</span>を習得しよう。
+      </span><br>
+      <span class="hero-headline-text">オンライン・プログラミング・ゼミの『SiiD』</span>
     </h1>
   </div>
   <div class="hero-images">
     <ul class="hero-images-list">
-      <% for( let index = 0; index < hero.images.length; index++ ) { %>
+      <% for( let index = 0; index < heroImages.length; index++ ) { %>
         <li class="hero-images-item">
-          <img src="/images/hero/<%= hero.images[index] %>" alt="">
+          <img src="/images/hero/<%= heroImages[index] %>" alt="">
         </li>
       <% } %>
     </ul>

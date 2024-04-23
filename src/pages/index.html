@@ -2,109 +2,19 @@
 const head = {
   title: common.title.index,
   disc: common.disc.index,
-};
-
-const header = {
-  contact: {
-    href: "/siid/counseling/",
-    text: "お申し込み"
-  }
-};
-
-const hero = {
-  copy: `
-    <span class="hero-headline-text">
-      <span>一生使えるDXスキル</span>を習得しよう。
-    </span><br>
-    <span class="hero-headline-text">オンライン・プログラミング・ゼミの『SiiD』</span>`,
-    images: ["siid/hero-image-1.jpg", "siid/hero-image-2.jpg", "siid/hero-image-3.jpg", "siid/hero-image-4.jpg", "siid/hero-image-5.jpg", "siid/hero-image-6.jpg"]
-};
-
-const about = {
-  headline: {
-    main: "CONCEPT", 
-    sub: "SiiDとは"
-  },
-  disc: `<p><strong>プログラミングは単なる技術ではなく、創造の力、未来を形作る鍵です。</strong><br>
-    私たちのスクールでは、プログラミングを一つの冒険として捉え、皆さん一人ひとりの可能性を最大限に引き出すことを最終目的と捉えています。</p>
-    <p>プログラミングというと難しい印象があるかと思います。<br>
-      それもそのはず、プログラミングは従来の学校教育とは異なる方法で習得する必要があります。<br>
-      私たちは、<strong>学習方法さえ間違わなければ誰にでも習得できるチャンスがあるスキル</strong>だと考えています。</p>
-      <p>私たちのスクールでは、最先端のAI・DXツールとアクティブラーニングを活用して、受講生の皆様に効率的かつ戦略的に学べる取り組みを行っています。<br>
-        私たちと共に、新しい境界を切り開く第一歩を踏み出しましょう！</p>`,
-  bottom: "Technology / Education / Web Marketing / IT Consulting / Development / Design / Business"
-};
-
-const point = {
-  headline: {
-    main: "POINT",
-    sub: "3つの特徴"
-  },
-  cards: [
-  {
-      headline: "ゼミ形式のカリキュラム",
-      img: {
-        url: "/images/point-1.png",
-        width: "286.5",
-        height: "205.5"
-      },
-      disc: "科学的に効果の高い学習方法を用い、プログラミングはもちろんエンジニアの仕事に必要な実践的なスキル・マインドを包括的に学ぶことができます。"
-    }, {
-      headline: "強力な監修・講師陣",
-      img: {
-        url: "/images/point-2.png",
-        width: "195",
-        height: "191"
-      },
-      disc: "100人規模のWeb開発企業で経営経験があり、テックYouTuberでもある現役エンジニアの堀口セイト氏が皆さんをサポートします。"
-    }, {
-      headline: "受講者ファースト",
-      img: {
-        url: "/images/point-3.png",
-        width: "285",
-        height: "214"
-      },
-      disc: "受講生様の現在地と目標をヒアリングした上で、お仕事の状況やご家庭の都合など、普段の生活リズムも考慮した上で学習計画をご提案します。"
-    }
-  ]
-};
-
-const course = {
-  headline: {
-    main: "Course",
-    sub: "コース"
-  },
-  courses: [
-    {
-      headline: "BASIC",
-      disc: "カジュアルに始められる易しめプログラム。<br>まずは始めてみたい、現在のキャリアに活かしたい、という方はこちら。",
-      href: "./basic/"
-    }, {
-      headline: "CAREER",
-      disc: "転職支援を含むストイックなプログラム。<br>本気で転職を目指したい、全力でコミットしたい、という方はこちら。",
-      href: "./career/"
-    }
-  ]
-};
-
-const contact = {
-  headline: "お申し込みはこちら",
-  href: "/siid/counseling/",
-  text: "お申し込み・個別相談会へ"
-};
-%>
+};%>
 
 <%- include('../modules/meta/_head.html', head) %>
-<%- include('../modules/layout/_header.html', {header: header}) %>
+<%- include('../modules/layout/_header.html') %>
 
-<%- include('../modules/components/_hero.html', {hero: hero}) %>
+<%- include('../modules/components/_hero.html') %>
 
 <main>
-  <%- include('../modules/components/_about.html', {about: about}) %>
-  <%- include('../modules/components/_point.html', {point: point}) %>
-  <%- include('../modules/components/_course.html', {course: course}) %>
+  <%- include('../modules/components/_about.html') %>
+  <%- include('../modules/components/_point.html') %>
+  <%- include('../modules/components/_course.html') %>
   <%- include('../modules/components/_showcase.html') %>
-  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+  <%- include('../modules/components/_contact.html') %>
 </main>
 
 <%- include('../modules/components/_modal.html') %>

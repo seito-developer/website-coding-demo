@@ -4,13 +4,6 @@ const head = {
   disc: common.disc.contact
 };
 
-const header = {
-  contact: {
-    href: "/contact/",
-    text: "CONTACT"
-  }
-};
-
 const hero = {
   title: "CONTACT",
   sub: "お問い合わせ",
@@ -19,7 +12,7 @@ const hero = {
 %>
 
 <%- include('../modules/meta/_head.html', head) %>
-<%- include('../modules/layout/_header.html', {header: header}) %>
+<%- include('../modules/layout/_header.html') %>
 
 <%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
 

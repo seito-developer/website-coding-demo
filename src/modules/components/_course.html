@@ -1,14 +1,25 @@
+<% const courses = [
+{
+  headline: "BASIC",
+  disc: "カジュアルに始められる易しめプログラム。<br>まずは始めてみたい、現在のキャリアに活かしたい、という方はこちら。",
+  href: "./basic/"
+}, {
+  headline: "CAREER",
+  disc: "転職支援を含むストイックなプログラム。<br>本気で転職を目指したい、全力でコミットしたい、という方はこちら。",
+  href: "./career/"
+}
+]; %>
 <section class="course">
-  <%- include('../modules/components/_headline.html', {modifier: "headline", main: course.headline.main, sub: course.headline.sub }) %>
+  <%- include('../modules/components/_headline.html', {
+    modifier: "headline", main: "Course", sub: "コース" }) %>
   
   <ul class="course-list">
-    <% for( let index = 0; index < course.courses.length; index++ ) { %>
+    <% for( let index = 0; index < courses.length; index++ ) { %>
       <li>
         <%- include('../modules/components/_panel.html', { 
-          headline: course.courses[index].headline, 
-          disc: course.courses[index].disc,
-          href: course.courses[index].href,
-          external: course.courses[index].external
+          headline: courses[index].headline, 
+          disc: courses[index].disc,
+          href: courses[index].href,
         }) %>
       </li>
     <% } %>
