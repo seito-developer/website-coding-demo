@@ -16,10 +16,7 @@
     <meta property="og:title" content="<%= title %>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= common.domain %>">
-    <% 
-    const ogpImg = theme === "theme-siid" ? "/images/ogp-siid.png" : "/images/ogp.png";
-    %>
-    <meta property="og:image" content="<%= ogpImg %>">
+    <meta property="og:image" content="/images/ogp.png">
 
     <!-- オプション -->
     <meta property="og:description" content="<%= disc %>">
@@ -31,10 +28,10 @@
     <meta name="twitter:site" content="@seito_horiguchi"> <!-- サイトのTwitterアカウント -->
     <meta name="twitter:title" content="<%= title %>">
     <meta name="twitter:description" content="<%= disc %>">
-    <meta name="twitter:image" content="<%= ogpImg %>">
+    <meta name="twitter:image" content="/images/ogp.png">
     <meta name="twitter:image:alt" content="<%= title %>">
 </head>
-<body class="<%= theme %>">
+<body>
 <!-- 
     |ω・`）ﾁﾗ
 

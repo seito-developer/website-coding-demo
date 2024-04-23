@@ -2,14 +2,15 @@
 @use "function" as fn;
 
 :root {
-  --color-main: #333;
-  --color-sub: #896ed9;
-  --color-sub-dark: #7d64c6;
-  --color-core: #333;
-  --color-accent: #896ed9;
-  --color-accent-dark: #7d64c6;
+  --color-main: #214a4a;
+  --color-sub: #289B8F;
+  --color-sub-dark: #248b80;
+  --color-core: #212732;
+  --color-accent: #EE7D2B;
+  --color-accent-dark: #d67026;
   --color-base: #F4F4F4;
-  --color-stream: #5b5570;
+  --color-strong: #0DD48D;
+  --color-stream: #313948;
   --color-img-bg: #C5DDDD;
   --color-gray: #ededed;
 }
