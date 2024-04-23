@@ -1,0 +1,42 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.course {
+  padding: fn.vw(160px) fn.vw(120px);
+  color: #fff;
+  background: var(--color-core);
+  .course-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: fn.vw(85px) 0 0;
+    > li {
+      width: 49.3%;
+    }
+  }
+  .course-footer {
+    text-align: center;
+    margin-top: fn.vw(60px);
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding-right: fn.vw(80px);
+    padding-left: fn.vw(80px);
+    .course-list {
+      flex-direction: column;
+      margin-bottom: 0;
+      > li {
+        width: 100%;
+        margin-bottom: fn.vw(80px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .course-footer {
+      margin-top: fn.vw(80px);
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+<section class="course">
+  <%- include('../modules/components/_headline.html', {modifier: "headline", main: course.headline.main, sub: course.headline.sub }) %>
+  
+  <ul class="course-list">
+    <% for( let index = 0; index < course.courses.length; index++ ) { %>
+      <li>
+        <%- include('../modules/components/_panel.html', { 
+          headline: course.courses[index].headline, 
+          disc: course.courses[index].disc,
+          href: course.courses[index].href,
+          external: course.courses[index].external
+        }) %>
+      </li>
+    <% } %>
+  </ul>
+  
+  <% if(course.button) { %>
+    <div class="course-footer">
+      <%- include('../modules/components/_link.html', {
+        modifier: course.button.modifier,
+        href: course.button.href,
+        text: course.button.text
+      }
+      ) %>
+    </div>
+  <% } %>
+</section>

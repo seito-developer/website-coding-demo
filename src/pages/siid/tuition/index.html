@@ -1,0 +1,410 @@
+<% 
+const head = {
+  title: common.title.siid.index,
+  disc: common.disc.siid.index,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/siid/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "TUITION",
+  sub: "費用・コース比較",
+  disc: "あなたに最適なコースをご提案します"
+};
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+
+const features = {
+  disc: `<strong>「自分はどれくらい勉強すればいいの？」</strong>と疑問に思われるかもしれません。<br>
+  プログラミング学習の期間は、皆さんの現時点での能力、目標とするゴール、普段の学習時間などによってさまざまに変化します。下記はその一例です。`,
+  contents: [
+    {
+      img: {
+        url: "/images/case-1.png",
+        width: "301",
+        height: "200"
+      },
+      title: "Case 1: カジュアルに始めて、ITを理解したい",
+      disc: [
+        "現在のスキル： PC歴5年。仕事でPCはよく使う。",
+        "学習時間： 平日は通勤中に1.0時間、休日に6.0時間まとめて勉強。",
+        "<strong>最適プラン： Basicコース（3ヶ月）</strong>",
+      ]
+    }, {
+      img: {
+        url: "/images/case-2.png",
+        width: "233",
+        height: "194"
+      },
+      title: "Case 2: 仕事を辞め、短期間で転職を目指す",
+      disc: [
+        "現在のスキル： PC歴3年、MSO製品は一通り操作できる",
+        "学習時間： 毎日8.0時間。プログラミング学習にフルコミット。",
+        "<strong>最適プラン： Careerコース（8ヶ月）</strong>",
+      ]
+    }, {
+      img: {
+        url: "/images/case-3.png",
+        width: "210",
+        height: "234"
+      },
+      title: "Case 3: 非IT職。家庭と両立しながら転職を目指す",
+      disc: [
+        "現在のスキル： PC操作は不得意",
+        "学習時間： 平日は仕事終わりに1.5時間、休日は3.0時間ずつ。",
+        "<strong>最適プラン： Careerコース(18ヶ月)</strong>",
+      ]
+    }, {
+      img: {
+        url: "/images/case-4.png",
+        width: "210",
+        height: "234"
+      },
+      title: "Case 4: 法人研修。業務で身になるDXスキルを",
+      disc: [
+        "Basic, Careerコースのほか、個別にプランをご提案可能です。",
+        "3名以上で団体割引も可。詳しくはお問い合わせください。",
+      ]
+    }
+  ],
+  bottom: `SiiDでは皆さんのご状況を伺い、どのような計画が最適かご提案します。<br>ぜひ個別相談にお申し込みください。<br>
+  <small>※Basicから始め、途中でCareerコースに切り替えるなども可能です。</small>`
+};
+
+%>
+
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <section class="tuition">
+    <div class="tuition-header">
+      <h1 class="tuition-header-inner">
+        <span>コース</span>
+        <span>Basicコース</span>
+        <span>Careerコース</span>
+      </h1>
+    </div>
+    <div class="tuition-body">
+      
+      <dl class="tuition-body-inner">
+        <!-- goal -->
+        <dt>目標とするゴール</dt>
+        <dd>
+          <ul>
+            <li>簡単なWebサイトやプログラムが作成できる</li>
+            <li>初級レベルのプログラミング問題が解ける</li>
+            <li>仕事で技術的なコミュニケーションがとれる</li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>Web/ITエンジニア職に内定する</li>
+            <li>中級レベルのプログラミング問題が解ける</li>
+            <li>ITビジネスパーソンとして十分なコミュニケーションスキルを習得する</li>
+          </ul>
+        </dd>
+
+        <!-- person -->
+        <dt>こんな人にオススメ</dt>
+        <dd>
+          <ul>
+            <li>気軽にプログラミングを始めてみたい</li>
+            <li>IT/DXスキルを現在の仕事に活かしたい</li>
+            <li>一緒に学べるメンターや仲間がほしい</li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい</li>
+            <li>一緒に学べるメンターや仲間がほしい</li>
+          </ul>
+        </dd>
+
+        <!-- 学習スタイル -->
+        <dt>学習スタイル</dt>
+        <dd>
+          <ul>
+            <li>
+              <strong>スケジュール管理</strong>
+              <p>カジュアル</p>
+            </li>
+            <li>
+              <strong>課題の内容</strong>
+              <ul>
+                <li>ペーパーテスト</li>
+                <li>コーディング演習</li>
+                <li>グループワーク</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <strong>スケジュール管理</strong>
+              <p>ストイック</p>
+            </li>
+            <li>
+              <strong>課題の内容</strong>
+              <ul>
+                <li>ペーパーテスト</li>
+                <li>コーディング演習</li>
+                <li>グループワーク</li>
+                <li>アプリケーション開発・企画</li>
+                <li>その他コミュニケーション力やプレゼンテーション力を強化する内容</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+
+        <!-- サポート範囲 -->
+        <dt>学習範囲</dt>
+        <dd>
+          <ul>
+            <li>
+              <strong>ハードスキル</strong>
+              <ul>
+                <li>コンピューターサイエンス基礎</li>
+                <li>HTML, CSS, JavaScript/ES6, SQL</li>
+                <li>Git, ChatGPT, CLI, DevTool</li>
+                <li>(Option) Node.js, Firebase</li>
+              </ul>
+            </li>
+            <li>
+              <strong>ソフトスキル</strong>
+              <ul>
+                <li>学習方法・課題解決力</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <strong>ハードスキル</strong>
+              <ul>
+                <li>コンピューターサイエンス基礎</li>
+                <li>HTML, CSS, JavaScript/ES6, Node.js, PHP/Laravel, MySQL</li>
+                <li>Git, ChatGPT, CLI, DevTool, Figma, Figjam</li>
+                <li>(Option) Docker, TypeScript, React, Python</li>
+              </ul>
+            </li>
+            <li>
+              <strong>ソフトスキル</strong>
+              <ul>
+                <li>学習方法・課題解決力</li>
+                <li>ビジネスコミュニケーション力</li>
+                <li>企画・プレゼンテーション力</li>
+              </ul>
+            </li>
+            <li>
+              <strong>転職支援</strong>
+              <ul>
+                <li>ポートフォリオのアプリケーション開発</li>
+                <li>履歴書・職務経歴書の添削</li>
+                <li>模擬面接</li>
+                <li>(Option) 求人や案件のご案内</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+
+        <!-- 実施内容 -->
+        <dt>実施内容</dt>
+        <dd>
+          <ul>
+            <li>1on1: 月次</li>
+            <li>個別コンサル: 初回のみ</li>
+            <li>グループワーク: 適時</li>
+            <li>チャット: 24h質問・相談OK</li>
+          </ul>
+        </dd>
+        <dd>
+          <ul>
+            <li>1on1: 週次</li>
+            <li>個別コンサル: 初回 + 適時</li>
+            <li>グループワーク: 適時</li>
+            <li>チャット: 24h質問・相談OK</li>
+          </ul>
+        </dd>
+
+        <!-- 期間-->
+        <dt>学習期間</dt>
+        <dd>
+          最短3ヶ月 〜 最長6ヶ月<br>
+          (目安: 約250 〜 300時間程度)
+        </dd>
+        <dd>
+          最短8ヶ月 〜 最長18ヶ月<br>
+          (目安: 約850 〜 1,050時間程度)
+        </dd>
+
+        <!-- tuition -->
+        <dt>
+          受講料
+          <span>
+            ※銀行振込 or クレジットカード支払い可。<br>
+            ※クレジットカード支払いの場合は手数料分が上乗せされます。
+          </span>
+        </dt>
+        <dd>
+          <div class="tuition-price">
+            <dl class="price">
+              <dt>3ヶ月プラン</dt>
+              <dd>
+                分割月々<em>24,085</em>円（税込）<br> ✕ 4回
+              </dd>
+              <dd>
+                一括料金<em>92,500</em>円（税込）
+              </dd>
+            </dl>
+            <dl class="price">
+              <dt>6ヶ月プラン</dt>
+              <dd>
+                分割月々<em>19,072</em>円（税込）<br> ✕ 8回
+              </dd>
+              <dd>
+                一括料金<em>146,500</em>円（税込）
+              </dd>
+            </dl>
+          </div>
+        </dd>
+        <dd>
+          <div class="tuition-price">
+            <dl class="price">
+              <dt>8ヶ月プラン</dt>
+              <dd>
+                分割月々<em>28,338</em>円（税込）<br> ✕ 12回
+              </dd>
+              <dd>
+                一括料金<em>326,507</em>円（税込）
+              </dd>
+            </dl>
+            <dl class="price">
+              <dt>12ヶ月プラン</dt>
+              <dd>
+                分割月々<em>30,416</em>円（税込）<br> ✕ 16回
+              </dd>
+              <dd>
+                一括料金<em>467,260</em>円（税込）
+              </dd>
+            </dl>
+            <dl class="price">
+              <dt>18ヶ月プラン</dt>
+              <dd>
+                分割月々<em>35,327</em>円（税込）<br> ✕ 20回
+              </dd>
+              <dd>
+                一括料金<em>678,390</em>円（税込）
+              </dd>
+            </dl>
+          </div>
+        </dd>
+      </dl>
+
+    </div>
+  </section>
+
+  <div class="u-mb-60">
+    <%- include('../modules/components/_headline.html', {modifier: "headline-primary headline-medium", main: "Discount", sub: "割引キャンペーン"}) %>
+  </div>
+  <section class="tuition">
+    <div class="tuition-header">
+      <h1 class="tuition-header-inner">
+        <span>コース</span>
+        <span>Basicコース</span>
+        <span>Careerコース</span>
+      </h1>
+    </div>
+    <div class="tuition-body">
+      <dl class="tuition-body-inner">
+
+        <!-- Discount -->
+        <dt>
+          リニューアルキャンペーン（6期生）
+          <span>
+            <em>2024年5月24日まで</em>にお申し込みの方に限り、下記の割引が適応されます。<br>
+          </span>
+        </dt>
+        <dd>
+          <p class="u-center"><strong>総額から<em>5% ~ 10%</em> OFF</strong></p>
+          <dl class="price">
+            <dt>3ヶ月プラン <span>(5% OFF)</span></dt>
+            <dd>
+              分割月々<del>24,085円</del><em>22,880</em>円（税込） ✕ 4回
+            </dd>
+            <dd>
+              一括料金<del>90,000円</del><em>87,875</em>円（税込）
+            </dd>
+          </dl>
+          <dl class="price">
+            <dt>6ヶ月プラン <span>(10% OFF)</span></dt>
+            <dd>
+              分割月々<del>22,880円</del><em>19,072</em>円（税込） ✕ 8回
+            </dd>
+            <dd>
+              一括料金<del>146,500円</del><em>131,850</em>円（税込）
+            </dd>
+          </dl>
+        </dd>
+        <dd>
+          <p class="u-center"><strong>総額から<em>35% ~ 45%</em> OFF</strong></p>
+          <dl class="price">
+            <dt>8ヶ月プラン <span>(35% OFF)</span></dt>
+            <dd>
+              分割月々<del>28,338円</del><em>18,420</em>円（税込） ✕ 12回
+            </dd>
+            <dd>
+              一括料金<del>326,507円</del><em>212,229</em>円（税込）
+            </dd>
+          </dl>
+          <dl class="price">
+            <dt>12ヶ月プラン <span>(40% OFF)</span></dt>
+            <dd>
+              分割月々<del>30,416円</del><em>18,249</em>円（税込） ✕ 16回
+            </dd>
+            <dd>
+              一括料金<del>467,260円</del><em>280,356</em>円（税込）
+            </dd>
+          </dl>
+          <dl class="price">
+            <dt>18ヶ月プラン <span>(45% OFF)</span></dt>
+            <dd>
+              分割月々<del>35,327円</del><em>19,430</em>円（税込） ✕ 20回
+            </dd>
+            <dd>
+              一括料金<del>678,390円</del><em>373,115</em>円（税込）
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+  <div class="u-mb-60">
+    <%- include('../modules/components/_headline.html', {modifier: "headline-primary headline-medium", main: "Study Plan", sub: "あなたに最適な学習プラン"}) %>
+  </div>
+
+  <div class="u-mb-120">
+    <%- include('../modules/components/_features.html', {features: features}) %>
+  </div>
+
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<%- include('../modules/meta/_foot.html') %>

@@ -1,0 +1,284 @@
+<% 
+const head = {
+  title: common.title.siid.career,
+  disc: common.disc.siid.career,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/siid/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "COURSES",
+  sub: "SiiD CAREER",
+  disc: "本気でエンジニア転職に取り組みたい方へ"
+};
+
+const features = {
+  disc: `Web/ITエンジニアの転職には、プログラミングスキルだけでなく、エンジニアとしてのマインドやコミュニケーション能力も求められます。<br><br>
+  Careerコースは<strong>「本気のエンジニア転職」</strong>をコンセプトに、技術としてのスキルはもちろん、そうしたソフトスキルをも含め、<strong>みなさんの総合力を鍛え上げる</strong>カリキュラムです。<br><br>
+  またエンジニア・人事経験者が皆さんのコーチとなり、一人一人に寄り添った最適な学習計画とフィードバックを行います。`,
+  contents: [
+    {
+      img: {
+        url: "/images/feature-1.png",
+        width: "245",
+        height: "200"
+      },
+      title: "目標とするゴール",
+      disc: [
+        "Web/ITエンジニア職に内定する",
+        "オリジナルのアプリケーションを完成させる",
+        "ITビジネスパーソンとして十分なコミュニケーションスキルを習得する"
+      ]
+    }, {
+      img: {
+        url: "/images/feature-2.png",
+        width: "245",
+        height: "171"
+      },
+      title: "前提条件・スキル",
+      disc: [
+        "入門的なPC操作",
+        "中学〜高校レベルの国語力と英語力"
+      ]
+    }, {
+      img: {
+        url: "/images/feature-3.png",
+        width: "245",
+        height: "161"
+      },
+      title: "こんな人にオススメ",
+      disc: [
+        "Web/ITエンジニア職、またはそれに準ずる職種にキャリアチェンジしたい",
+        "1人では挫折しそうなのでメンターや仲間がほしい"
+      ]
+    }
+  ]
+};
+const point = {
+  headline: {
+    main: "Careerコースの特徴",
+    isNormal: true,
+    link: { 
+      modifier: "",
+      href: "/works",
+      text: "もっと見る"
+    }
+  },
+  cards: [
+    {
+      headline: "受講生ファースト",
+      img: {
+        url: "/images/style-5.png",
+        width: "227.5",
+        height: "190"
+      },
+      disc: "受講生様の予定を考慮した上で学習計画を立てます。現在の仕事や家庭を両立しながら長期で取り組む、短期集中型で全力コミットする、など受講生様のペースに合わせた計画をご提案します。（目安：最短6ヶ月、最長18ヶ月）"
+    }, {
+      headline: "実践的コーディング",
+      img: {
+        url: "/images/style-2.png",
+        width: "255.5",
+        height: "170.5"
+      },
+      disc: "フロントエンド、バックエンド、アルゴリズムなど、企業が求めるスキルを実用的な優先的に学習いただくことで、実践的な開発スキルを習得いただきます。"
+    }, {
+      headline: "ソフトスキルの向上",
+      img: {
+        url: "/images/style-1.png",
+        width: "249",
+        height: "204"
+      },
+      disc: "本コースでは、同じグループワークのメンバーや講師とのコミュニケーションをたくさんとる必要のある課題も出すことがあります。これを通じて、転職に必要なビジネスコミュニケーション力の向上も目指します。"
+    }, {
+      headline: "グループワーク",
+      img: {
+        url: "/images/style-3.png",
+        width: "297.5",
+        height: "200"
+      },
+      disc: "本プログラムでは時折グループワークを挟みます。同じ志をもったチームメンバーと取り組むことで、モチベーションを維持し時には助け合いながら進行することができます。"
+    }, {
+      headline: "個別相談",
+      img: {
+        url: "/images/style-4.png",
+        width: "247.5",
+        height: "182.5"
+      },
+      disc: "チャットやZoom面談を通して講師に直接相談が可能です。技術やキャリア、また学習方法やモチベーションの上げ方など何でもお気軽にご相談ください。"
+    }
+  ]
+};
+
+const curriculum = {
+  headline: "カリキュラム",
+  contents: [
+    ["オリエンテーション", "アプリケーション開発概論", "HTML/CSS", "IDE, Git, ほか"],
+    ["JavaScript", "中間復習 1", "アルゴリズム", "オブジェクト指向とクラス"],
+    ["データベース", "中間復習 2", "モダンJavaScript", "モダンJavaScript開発演習"],
+    ["アイデアの作り方（座学）","バックエンド開発環境","PHP基礎, データベース基礎","Laravel基礎"],
+    ["開発演習 1/2", "開発演習 2/2", "ポートフォリオ作成 1/3", "セキュリティ対策"],
+    ["ポートフォリオ作成 2/3", "ポートフォリオ作成 3/3", "サードパーティAPI", "UI/UXデザイン"],
+    ["業界研究・自己分析", "企業研究", "履歴書・職務経歴書の作成", "求人サイト・SNS活用"],
+    ["面接対策", "以降、転職支援サポート期間"]
+  ]
+};
+
+const skills = [
+  {
+    modifier: "emblem-a",
+    cat: "regular",
+    icon: "lightbulb",
+    name: "学習方法"
+  },  {
+    modifier: "emblem-b",
+    cat: "solid",
+    icon: "users-between-lines",
+    name: "グループワーク"
+  }, {
+    modifier: "emblem-c",
+    cat: "regular",
+    icon: "handshake",
+    name: "コミュニケーション"
+  }, {
+    modifier: "emblem-d",
+    cat: "solid",
+    icon: "computer",
+    name: "CS基礎"
+  }, {
+    modifier: "emblem-e",
+    cat: "solid",
+    icon: "database",
+    name: "データベース"
+  }, {
+    modifier: "emblem-a",
+    cat: "solid",
+    icon: "diagram-project",
+    name: "アルゴリズム"
+  }, {
+    modifier: "emblem-b",
+    cat: "regular",
+    icon: "object-group",
+    name: "OOP"
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "html5",
+    name: "HTML"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "css3-alt",
+    name: "CSS"
+  }, {
+    modifier: "emblem-e",
+    cat: "brands",
+    icon: "sass",
+    name: "Sass"
+  }, {
+    modifier: "emblem-a",
+    cat: "brands",
+    icon: "js",
+    name: "JavaScript"
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "node",
+    name: "Node.js/npm"
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "php",
+    name: "PHP"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "laravel",
+    name: "Laravel"
+  }, {
+    modifier: "emblem-e",
+    cat: "solid",
+    icon: "code",
+    name: "ポートフォリオ作成"
+  }, {
+    modifier: "emblem-a",
+    cat: "solid",
+    icon: "briefcase",
+    name: "就活対策"
+  }, {
+    modifier: "emblem-b",
+    cat: "solid",
+    icon: "code",
+    name: "ポートフォリオ作成"
+  }, {
+    modifier: "emblem-c",
+    cat: "solid",
+    icon: "robot",
+    name: "ChatGPT"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "github",
+    name: "Git/GitHub"
+  }, {
+    modifier: "emblem-e",
+    cat: "brands",
+    icon: "docker",
+    name: "Docker",
+    option: true
+  }, {
+    modifier: "emblem-a",
+    cat: "brands",
+    icon: "js",
+    name: "TypeScript",
+    option: true
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "react",
+    name: "React",
+    option: true
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "python",
+    name: "Python",
+    option: true
+  }
+];
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+%>
+
+
+<%- include('../modules/meta/_head.html', head) %>
+
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <%- include('../modules/components/_features.html', {features: features}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_curriculum.html', {curriculum: curriculum}) %>
+  <div class="u-mb-240">
+    <%- include('../modules/components/_shelf.html', {skills: skills}) %>
+  </div>
+  <div class="u-mb-240">
+    <%- include('../modules/components/_profile.html') %>
+  </div>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<%- include('../modules/meta/_foot.html') %>

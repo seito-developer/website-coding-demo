@@ -1,0 +1,35 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "sass:math";
+
+.u-disable {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.5;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+@for $index from 0 through 60 {
+  $spacer: 5;
+  $value: $index * $spacer * 1px;
+  $sp-value: math.div($value, 2);
+  .u-mb-#{$index * $spacer} {
+    margin-bottom: fn.vw($value);
+    // @media screen and (max-width: cn.$bp-sm){
+    //   margin-bottom: fn.vw($sp-value);
+    // }
+  }
+  .u-mt-#{$index * $spacer} {
+    margin-bottom: fn.vw($value);
+    @media screen and (max-width: cn.$bp-sm){
+      margin-bottom: fn.vw($sp-value);
+    }
+  }
+}
+
+.u-center {
+  text-align: center;
+}

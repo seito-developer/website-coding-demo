@@ -1,0 +1,36 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.headline-small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > h1 {
+    font-weight: bold;
+    font-size: fn.fs(48px);
+    color: var(--color-main);
+    letter-spacing: .05em;
+  }
+
+  // modifier
+  &.headline-small-white {
+    > h1 {
+      color: #fff;
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    display: block;
+    text-align: center;
+    > h1 {
+      font-size: fn.fs(24px);
+    }
+    > a {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

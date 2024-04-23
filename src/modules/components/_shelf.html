@@ -1,0 +1,26 @@
+<section class="shelf">
+  <div class="shelf-container">
+    <div class="shelf-header">
+      <%- include('../modules/components/_headline-small.html', { 
+        title: "身につくスキル",
+        modifier: "headline-small-white",
+        link: false
+      }) %>
+    </div>
+  </div>
+
+  <div class="shelf-contents">
+    <ul class="shelf-list">
+      <% skills.forEach(skill => { %>
+        <li>
+            <%- include("../modules/components/_emblem.html", { 
+              modifier: skill.modifier,
+              cat: skill.cat,
+              icon: skill.icon,
+              name: skill.name,
+              option: skill.option }) %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>

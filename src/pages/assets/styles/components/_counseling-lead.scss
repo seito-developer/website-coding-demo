@@ -1,0 +1,28 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.counseling-lead {
+  font-size: fn.fs(18px);
+  padding: 0 fn.vw(120px) fn.vw(40px);
+  text-align: center;
+
+  strong {
+    color: var(--color-sub);
+  }
+
+  .counseling-lead-spbr {
+    display: none;
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    font-size: fn.fs(16px);
+    padding-right: fn.vw(40px);
+    padding-left: fn.vw(40px);
+
+    .counseling-lead-spbr {
+      display: block;
+    }
+  }
+}

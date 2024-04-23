@@ -1,0 +1,29 @@
+<% const profile = {
+  headline: {
+    main: "PROFILE", 
+    sub: "講師紹介"
+  }
+};
+%>
+
+<section class="profile">
+  <%- include('../modules/components/_headline.html', {modifier: "headline-left", main: profile.headline.main, sub: profile.headline.sub}) %>
+
+  <div class="profile-body">
+    <div class="profile-img">
+      <img src="/images/profile.jpg" alt="SiiD講師：堀口セイト">
+    </div>
+    <div class="profile-texts">
+      <h2 class="profile-name">
+        堀口セイト（SiiD代表・講師）
+      </h2>
+      <div class="profile-disc">
+        <p>前職LIG Philippinesでは代表/VPoEとして約100名のエンジニアチームを組織し、アプリケーション開発・DX事業に携わる。経営のほか、採用・マネジメントにも注力する。</p>
+        <p>2022年にはミネルバ大学院MDA専攻へ入学するほか、テック系YouTubeでチャンネル登録者数10万人を達成。現役でフロントエンドエンジニアも務める。</p>
+          
+        <p>主な書籍に『セイト先生が教えるプログラミング入門 - 日経BP（2024/03）』、『最強のCSS設計 - SBクリエイティブ（2015/9）』がある。</p>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,92 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.headline {
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  > span {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      transform-origin: right center;
+      transform: scaleX(1);
+      transition: transform .25s .25s cubic-bezier(0.28,-0.09, 0.58, 1);
+    }
+    &:nth-of-type(1) {
+      font-size: fn.fs(120px);
+      padding: .1em 0;
+      margin-bottom: fn.fs(30px);
+      text-shadow: 0px fn.fs(4px) fn.fs(4px) rgba(0, 0, 0, 0.25);
+      @include mixin.font-maven(600);
+    }
+    &:nth-of-type(2) {
+      font-size: fn.fs(18px);
+      font-weight: normal;
+    }
+  }
+
+  // modifier
+  &.headline-left {
+    text-align: left;
+  }
+  &.headline-primary {
+    color: var(--color-main);
+    > span {
+      &::after {
+        background: var(--color-main);
+      }
+    }
+  }
+  &.headline-medium {
+    > span {
+      &:nth-of-type(1) {
+        font-size: fn.fs(80px);
+        margin-bottom: fn.vw(20px);
+      }
+    }
+  }
+  &.is-active {
+    > span {
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    > span {
+      &:nth-of-type(1) {
+        font-size: fn.fs(60px);
+        margin-bottom: fn.vw(10px);
+      }
+    }
+
+    &.headline-left {
+      text-align: center;
+    }
+
+    // modifier
+    &.headline-medium {
+      > span {
+        &:nth-of-type(1) {
+          font-size: fn.fs(40px);
+          margin-bottom: -.2em;
+        }
+        &:nth-of-type(2) {
+          font-size: fn.fs(14px);
+        }
+      }
+    }
+  }
+}

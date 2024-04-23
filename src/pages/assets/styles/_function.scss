@@ -1,0 +1,17 @@
+@use "const" as cn;
+@use "sass:math";
+
+@function vw($px){
+  @return #{calc(math.div($px, cn.$site-width) * 100)}vw;
+}
+
+@function vh($px){
+  @return #{calc(math.div($px, cn.$site-width) * 100)}vh;
+}
+
+@function fs($px){
+  $base: #{calc(math.div($px, cn.$site-width) * 100)}vw;
+  $max: $px;
+  $min: $px;
+  @return max($min, $base);
+}

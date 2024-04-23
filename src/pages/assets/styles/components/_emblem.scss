@@ -1,0 +1,85 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.emblem {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  padding: fn.vw(24px);
+  border-radius: fn.vw(8px);
+  position: relative;
+  .emblem-inner {
+    display: inline-block;
+    width: fn.vw(140px);
+    height: fn.vw(140px);
+    font-size: fn.fs(50px);
+    line-height: fn.vw(140px);
+    border-radius: 50%;
+    color: #fff;
+  }
+  .emblem-caption {
+    margin-top: fn.vw(12px);
+    font-size: fn.fs(16px);
+    color: var(--color-strong);
+  }
+  .emblem-option {
+    display: block;
+    white-space: nowrap;
+    font-size: fn.fs(12px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-strong);
+    color: #fff;
+    border-radius: 0 fn.vw(8px) 0 0;
+    padding: fn.vw(2px) fn.vw(4px);
+  }
+
+  // modifiers
+  &.emblem-option {
+    opacity: .5;
+  }
+
+  &.emblem-a {
+    .emblem-inner {
+      background: linear-gradient(105deg, #52487D 1.43%, #14413E 98.05%, #414A59 98.06%);
+    }
+  }
+  &.emblem-b {
+    .emblem-inner {
+      background: linear-gradient(105deg, #486D7D 1.43%, #14413E 98.05%, #414A59 98.06%);
+    }
+  }
+  &.emblem-c {
+    .emblem-inner {
+      background: linear-gradient(105deg, #7C487D 1.43%, #14413E 98.05%, #414A59 98.06%);
+    }
+  }
+  &.emblem-d {
+    .emblem-inner {
+      background: linear-gradient(105deg, #7D7848 1.43%, #14413E 98.05%, #414A59 98.06%);
+    }
+  }
+  &.emblem-e {
+    .emblem-inner {
+      background: linear-gradient(105deg, #7D4B48 1.43%, #14413E 98.05%, #414A59 98.06%);
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .emblem-inner {
+      font-size: fn.fs(20px);
+    }
+    .emblem-caption {
+      margin-top: fn.vw(12px);
+      font-size: fn.fs(8px);
+      color: var(--color-strong);
+    }
+    .emblem-option {
+      font-size: fn.fs(12px);
+      transform: scale(.5);
+      transform-origin: top right;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.profile {
+  background: linear-gradient(105deg, #212732 1.43%, #14413E 53.34%, #414A59 98.06%);
+  padding: fn.vw(190px) fn.vw(120px) 0;
+  color: #fff;
+  position: relative;
+  .profile-body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: fn.vw(120px);
+  }
+  .profile-img {
+    flex-grow: 1;
+    width: 50%;
+    position: relative;
+    > img {
+      object-fit: cover;
+      width: fn.vw(610px);
+      height: fn.vw(725px);
+      position: absolute;
+      left: fn.vw(-76px);
+      bottom: fn.vw(-120px);
+    }
+  }
+  .profile-texts {
+    flex-grow: 1;
+    width: 50%;
+    padding: fn.vw(110px) 0;
+  }
+  .profile-name {
+    margin: 0;
+    position: relative;
+    font-size: fn.fs(32px);
+    &::after {
+      content:"";
+      display: block;
+      width: fn.vw(80px);
+      border-top: fn.vw(1px) solid #fff;
+      margin: fn.vw(40px) 0 fn.vw(43px);
+    }
+  }
+  .profile-disc {
+    > p {
+      font-size: fn.fs(24px);
+      line-height: 1.5;
+      letter-spacing: .25em;
+      margin-top: 0;
+      margin-bottom: fn.vw(24px);
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    padding: fn.vw(95px) fn.vw(60px);
+    .profile-body {
+      // display: block;
+      justify-content: space-between;
+      margin-top: fn.vw(120px);
+    }
+    .profile-img {
+      flex-grow: 1;
+      width: 30%;
+      position: relative;
+      > img {
+        position: static;
+        aspect-ratio: 610 / 725;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .profile-texts {
+      flex-grow: 1;
+      width: 70%;
+      padding: 0;
+      padding-left: 4%;
+      margin-top: -0.35em;
+    }
+    .profile-name {
+      font-size: fn.fs(16px);
+    }
+    .profile-disc {
+      > p {
+        font-size: fn.fs(10px);
+        margin-bottom: fn.vw(24px);
+      }
+    }
+  }
+}

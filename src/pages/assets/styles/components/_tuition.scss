@@ -1,0 +1,145 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.tuition {
+  margin: 0 fn.vw(20px) fn.vw(120px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: fn.vw(16px) fn.vw(8px) 0 0;
+
+  // .tuition-header {}
+  .tuition-header-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    > span {
+      display: block;
+      text-align: center;
+      padding: fn.vw(40px) 0;
+      &:nth-child(1){
+        display: none;
+      }
+      &:nth-child(2){
+        background: var(--color-sub);
+        color: #fff;
+      }
+      &:nth-child(3){
+        background: var(--color-core);
+        color: #fff;
+      }
+    }
+  }
+  // .tuition-body {}
+  .tuition-body-inner {
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto; /* 行の高さを自動で設定 */
+    > dt {
+      grid-column: 1 / -1;
+      font-size: fn.fs(24px);
+      font-weight: bold;
+      background: var(--color-gray);
+      text-align: center;
+      padding: fn.vw(20px) 0;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        border: fn.vw(40px) solid transparent;
+        border-top: fn.vw(35px) solid var(--color-gray);
+        position: absolute;
+        z-index: 3;
+        bottom: fn.vw(-70px);
+        left: 50%;
+        margin-left: fn.vw(-40px);
+      }
+      span {
+        display: block;
+        font-weight: normal;
+        font-size: fn.fs(12px);
+      }
+    }
+    > dd {
+      grid-column: auto; /* ddを自動で各列に配置 */
+      font-size: fn.fs(18px);
+      padding: fn.vw(20px);
+      text-align: center;
+      &:nth-of-type(odd){
+        text-align: right;
+        border-right: 1px solid var(--color-gray);
+      }
+      &:nth-of-type(even){
+        // background: var(--color-base);
+        text-align: left;
+        border-left: 1px solid var(--color-gray);
+      }
+      ul {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+        line-height: 2;
+        padding-left: 1.25em;
+        &::after {
+          content: "";
+          display: block;
+          width: 0.5em;
+          height: 0.5em;
+          border-radius: 50%;
+          background: var(--color-main);
+          position: absolute;
+          left: 0;
+          top: .8em;
+        }
+      }
+      ul, p {
+        margin: 0;
+        display: block;
+        padding-left: 1.25em;
+      }
+    }
+  }
+  @media screen and (max-width: cn.$bp-sm){
+    .tuition-header-inner {
+      font-size: fn.fs(20px);
+    }
+    .tuition-body-inner {
+      grid-template-columns: repeat(2, minmax(50%, 1fr));
+      > dt {
+        font-size: fn.fs(16px);
+        padding: fn.vw(40px) 0;
+      }
+      > dd {
+        font-size: fn.fs(12px);
+        padding: fn.vw(40px) fn.vw(30px);
+        &:nth-of-type(odd),
+        &:nth-of-type(even){
+          text-align: left;
+        }
+      }
+      ul {
+        li {
+          padding-left: .95em;
+          line-height: 1.5;
+          margin-bottom: .5em;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::after {
+            top: 0.5em;
+          }
+        }
+        ul {
+          padding-left: 0.25em;
+        }
+      }
+    }
+  }
+}

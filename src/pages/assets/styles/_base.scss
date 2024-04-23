@@ -1,0 +1,61 @@
+@use "const" as cn;
+@use "function" as fn;
+
+:root {
+  --color-main: #333;
+  --color-sub: #896ed9;
+  --color-sub-dark: #7d64c6;
+  --color-core: #333;
+  --color-accent: #896ed9;
+  --color-accent-dark: #7d64c6;
+  --color-base: #F4F4F4;
+  --color-stream: #5b5570;
+  --color-img-bg: #C5DDDD;
+  --color-gray: #ededed;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-size: fn.fs(14px);
+  font-feature-settings: "palt";
+  font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  background: var(--color-base);
+  letter-spacing: .05em;
+  -webkit-tap-highlight-color: var(--color-base);
+}
+
+::selection{
+  background: var(--color-main);
+  color: #fff;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl, dt, dd, figure, figcaption {
+  margin: 0;
+}
+
+strong, em, b {
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  color: var(--color-sub);
+  font-style: normal;
+  font-weight: bold;
+}

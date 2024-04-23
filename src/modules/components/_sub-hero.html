@@ -1,0 +1,10 @@
+<% 
+  const modifier = (hero.modifier) ? `${hero.modifier}` : "";
+%>
+<div class="sub-hero <%= hero.modifier %>">
+  <h1 class="sub-hero-title">
+    <span><%= hero.title %></span>
+    <span><%= hero.sub %></span>
+    <span><%= hero.disc %></span>
+  </h1>
+</div>

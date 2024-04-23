@@ -1,0 +1,155 @@
+<% 
+const head = {
+  title: common.title.index,
+  disc: common.disc.index,
+  theme: ""
+};
+
+const header = {
+  contact: {
+    href: "/contact/",
+    text: "CONTACT"
+  }
+};
+
+const hero = {
+  copy: `
+    <span class="hero-headline-text">
+      <span>世の中のバグを解決する。</span>
+    </span><br>
+    <span class="hero-headline-text">テクノロジー ✕ 教育 ✕ Webマーケティング</span>`,
+  images: ["index/hero-image-1.jpg", "index/hero-image-2.jpg", "index/hero-image-3.jpg", "index/hero-image-4.jpg", "index/hero-image-5.jpg", "index/hero-image-6.jpg"]
+};
+
+const about = {
+  headline: {
+    main: "ABOUT", 
+    sub: "BugFixについて"
+  },
+  disc: `<p><strong>日本社会にはまだ多くのバグが放置されています。</strong>例えばIT投資...日本は1995~2017年の間ほとんどITへの投資額が横ばいだった背景から、他国よりもソフトウェアの生産性や人材の確保が遅れている実態があります。</p>
+    <p>あるいはIT教育...日本では2030年に最大でIT人材がそれだけの数不足すると言われていますが、これにはIT教育をこれまでおざなりにしていた背景があります。<br>
+      そんな世の中の不具合を、黙って見ているだけのことはできない。そんな思いから弊社は誕生しました。</p>
+    <p>テクノロジー、教育、Webマーケティングの分野から、<strong>世の中のバグを修正します。</strong></p>`,
+  bottom: "Technology / Education / Web Marketing / IT Consulting / Development / Design / Business",
+  button: false
+};
+
+const point = {
+  headline: {
+    main: "For Companies",
+    sub: "企業様向けサービス"
+  },
+  cards: [
+    {
+      headline: "Web開発",
+      img: {
+        url: "/images/point-1.png",
+        width: "286.5",
+        height: "205.5"
+      },
+      disc: "アプリケーション開発を支援します。主な得意領域はJavaScript, TypeScript, Python,など。フロントエンドからバックエンドまで、またFlutterでのアプリ開発も行います。"
+    }, {
+      headline: "技術・採用・研修支援",
+      img: {
+        url: "/images/style-2.png",
+        width: "255.5",
+        height: "170.5"
+      },
+      disc: "技術顧問として、また採用コンサルタントとして、お客様のビジネスを支援します。エンジニアの採用はもちろん、研修を行い一流の技術者を育成する支援も行います。"
+    }, {
+      headline: "Webマーケティング",
+      img: {
+        url: "/images/style-4.png",
+        width: "247.5",
+        height: "182.5"
+      },
+      disc: "YouTube,TikTokなどのSNSやSEOを活用したWebマーケティングを担います。自社チャンネル（登録者11万人~）をはじめとした運用実績から、お客様に最適な戦略を提案します。"
+    }
+  ]
+};
+
+const course = {
+  headline: {
+    main: "For Individuals",
+    sub: "個人の方向けサービス"
+  },
+  courses: [
+    {
+      headline: "SiiD",
+      disc: "プログラミングゼミ・SiiDでは、ソフトウェアの開発技術を学びたい方やITエンジニアへ転職したい方向けに、テクノロジーの学習支援を行っています。",
+      href: "/siid/"
+    }, {
+      headline: "EEE転職",
+      disc: "エンジニア向けキャリアサポート・EEE転職では、ITエンジニアの方向けに年収アップや希望の開発現場に就職できるよう支援を行っています。",
+      href: "https://docs.google.com/presentation/d/e/2PACX-1vSrGByHHllov7eUQErMETnQ5wyt0e81IFCJ9aQWG04LTuy0A_TCVfcaeFadoPfLRGbcuMRl8q2xa7OC/pub?start=false&loop=false&delayms=30000&fbclid=IwZXh0bgNhZW0CMTEAAR3V6tU0pHWCbot5qImegxudPq-wj00Tfzpq4IPnkNoy9veui1RJ1HWYryg_aem_Aeh11oh1gRyWOGriiERHZaM6SHMMRgIo91Tp0XG_xXraJW8IappqvmIdTduX-1lO0NsMzoVi_8tKrQKfy_Up-qzT&slide=id.g15c5b3446e2_0_0",
+      external: true
+    }
+  ]
+};
+
+const media = {
+  headline: {
+    main: "Media",
+    isNormal: true,
+    link: { 
+      modifier: "",
+      href: "/works",
+      text: "もっと見る"
+    }
+  },
+  media: [
+  {
+      headline: "書籍",
+      href: "https://amzn.asia/d/c7sj64L",
+      img: {
+        url: "/images/media/book.jpg",
+        width: "156",
+        height: "222",
+      },
+      disc: "代表はこれまでに2冊執筆歴があります。その内の１冊『現役エンジニア＆インフルエンサー セイト先生が教えるプログラミング入門』は日経BP社から好評発売中です。(2024/3)"
+    }, {
+      headline: "YouTube",
+      href: "https://www.youtube.com/@webit7652",
+      img: {
+        url: "/images/media/youtube.png",
+        width: "325",
+        height: "217"
+      },
+      disc: "登録者数約12万人のYouTubeチャンネルでは、「テクノロジーを楽しくわかりやすく」をコンセプトに、毎週Web/IT業界の情報やプログラミングのチュートリアルなどを発信しています。"
+    }, {
+      headline: "公式LINE",
+      href: "https://line.me/R/ti/p/@558nfxrq",
+      img: {
+        url: "/images/media/line.png",
+        width: "222",
+        height: "222"
+      },
+      disc: "公式LINEではイベントやライブ配信の告知を行っているほか、無料キャリア相談にも乗っています。Web/ITエンジニアを中心としたキャリアでお悩みの方はご利用ください。"
+    }
+  ]
+};
+
+const contact = {
+  headline: "お問い合わせはこちら",
+  href: "/contact/",
+  text: "CONTACT"
+};
+%>
+
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_hero.html', {hero: hero}) %>
+
+<main>
+  <%- include('../modules/components/_about.html', {about: about}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_course.html', {course: course}) %>
+  <%- include('../modules/components/_point.html', {point: media}) %>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<script type="module" src="/assets/scripts/index.js"></script>
+<%- include('../modules/meta/_foot.html') %>

@@ -1,0 +1,210 @@
+<% 
+const head = {
+  title: common.title.siid.basic,
+  disc: common.disc.siid.basic,
+  theme: "theme-siid"
+};
+
+const header = {
+  contact: {
+    href: "/siid/counseling/",
+    text: "お申し込み"
+  }
+};
+
+const hero = {
+  title: "COURSES",
+  sub: "SiiD BASIC",
+  disc: "ますはプログラミングを楽しみたい方へ"
+};
+
+const features = {
+  disc: `Basicコースでは<strong>「プログラミングを当たり前に」</strong>をコンセプトに、技術と効率的な学習方法を学びます。<br><br>
+  エンジニアに必要な基礎技術のほか、どのように学習すべきかといったノウハウも合わせて習得することで、みなさんのプログラミング習得速度を加速させます。`,
+  contents: [
+    {
+      img: {
+        url: "/images/feature-1.png",
+        width: "245",
+        height: "200"
+      },
+      title: "目標とするゴール",
+      disc: [
+        "簡単なWebサイトが作成できる",
+        "初級レベルのプログラミング問題が解ける",
+        "仕事で技術的なコミュニケーションがとれる"
+      ]
+    }, {
+      img: {
+        url: "/images/feature-2.png",
+        width: "245",
+        height: "171"
+      },
+      title: "前提条件・スキル",
+      disc: [
+        "入門的なPC操作",
+        "中学〜高校レベルの国語力と英語力",
+      ]
+    }, {
+      img: {
+        url: "/images/feature-3.png",
+        width: "245",
+        height: "161"
+      },
+      title: "こんな人にオススメ",
+      disc: [
+        "気軽にプログラミングを始めてみたい",
+        "ITスキルを仕事に活かしたい"
+      ]
+    }
+  ]
+};
+
+const point = {
+  headline: {
+    main: "Basicコースの特徴",
+    isNormal: true,
+    link: { 
+      modifier: "",
+      href: "/works",
+      text: "もっと見る"
+    }
+  },
+  cards: [
+  {
+      headline: "受講生ファースト",
+      img: {
+        url: "/images/style-5.png",
+        width: "227.5",
+        height: "190"
+      },
+      disc: "受講生様の予定を考慮した上で学習計画を立てます。現在の仕事や家庭を両立しながら長期で取り組む、短期集中型で全力コミットする、など受講生様のペースに合わせた計画をご提案します。（目安：最短6ヶ月、最長18ヶ月）"
+    }, {
+      headline: "グループワーク",
+      img: {
+        url: "/images/style-3.png",
+        width: "297.5",
+        height: "200"
+      },
+      disc: "本プログラムでは時折グループワークを挟みます。同じ志をもったチームメンバーと取り組むことで、モチベーションを維持し時には助け合いながら進行することができます。"
+    }, {
+      headline: "個別相談",
+      img: {
+        url: "/images/style-4.png",
+        width: "247.5",
+        height: "182.5"
+      },
+      disc: "チャットやZoom面談を通して講師に直接相談が可能です。技術やキャリア、また学習方法やモチベーションの上げ方など何でもお気軽にご相談ください。"
+    }
+  ]
+};
+
+const curriculum = {
+  headline: "カリキュラム",
+  contents: [
+    ["オリエンテーション", "アプリケーション開発概論", "HTML/CSS", "IDE, Git, ほか"],
+    ["JavaScript", "中間復習", "アルゴリズム", "オブジェクト指向とクラス"],
+    ["データベース", "総復習"],
+  ]
+};
+
+const skills = [
+  {
+    modifier: "emblem-a",
+    cat: "regular",
+    icon: "lightbulb",
+    name: "学習方法"
+  },  {
+    modifier: "emblem-b",
+    cat: "solid",
+    icon: "users-between-lines",
+    name: "グループワーク"
+  }, {
+    modifier: "emblem-c",
+    cat: "solid",
+    icon: "computer",
+    name: "CS基礎"
+  }, {
+    modifier: "emblem-d",
+    cat: "solid",
+    icon: "database",
+    name: "データベース"
+  }, {
+    modifier: "emblem-e",
+    cat: "solid",
+    icon: "diagram-project",
+    name: "アルゴリズム"
+  }, {
+    modifier: "emblem-a",
+    cat: "regular",
+    icon: "object-group",
+    name: "OOP"
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "html5",
+    name: "HTML"
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "css3-alt",
+    name: "CSS"
+  }, {
+    modifier: "emblem-d",
+    cat: "brands",
+    icon: "js",
+    name: "JavaScript"
+  }, {
+    modifier: "emblem-e",
+    cat: "solid",
+    icon: "robot",
+    name: "ChatGPT"
+  }, {
+    modifier: "emblem-a",
+    cat: "brands",
+    icon: "github",
+    name: "Git/GitHub"
+  }, {
+    modifier: "emblem-b",
+    cat: "brands",
+    icon: "node",
+    name: "Node.js/npm",
+    option: true
+  }, {
+    modifier: "emblem-c",
+    cat: "brands",
+    icon: "google",
+    name: "Firebase",
+    option: true
+  }
+];
+
+const contact = {
+  headline: "お申し込みはこちら",
+  href: "/siid/counseling/",
+  text: "お申し込み・個別相談会へ"
+};
+%>
+
+
+<%- include('../modules/meta/_head.html', head) %>
+<%- include('../modules/layout/_header.html', {header: header}) %>
+
+<%- include('../modules/components/_sub-hero.html', {hero: hero}) %>
+
+<main>
+  <%- include('../modules/components/_features.html', {features: features}) %>
+  <%- include('../modules/components/_point.html', {point: point}) %>
+  <%- include('../modules/components/_curriculum.html', {curriculum: curriculum}) %>
+  <div class="u-mb-240">
+    <%- include('../modules/components/_shelf.html', {skills: skills}) %>
+  </div>
+  <div class="u-mb-240">
+    <%- include('../modules/components/_profile.html') %>
+  </div>
+  <%- include('../modules/components/_contact.html', {contact: contact}) %>
+</main>
+
+<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+
+<%- include('../modules/meta/_foot.html') %>

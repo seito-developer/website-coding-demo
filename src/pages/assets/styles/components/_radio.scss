@@ -1,0 +1,72 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.radio {
+  > input {
+    position: absolute;
+    visibility: hidden;
+  }
+  .radio-inner {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 13px 24px 14px 60px;
+    background-color: #fff;
+    border: fn.vw(2px) solid var(--color-main);
+    border-radius: fn.vw(16px);
+    font-weight: bold;
+    transition: border-color ease-out 0.2s, color ease-out 0.2s;
+    > i {
+      content: "";
+      display: block;
+      position: absolute;
+      top: .85em;
+      left: 20px;
+      width: 24px;
+      height: 24px;
+      border: fn.vw(2px) solid var(--color-main);
+      border-radius: 50%;
+      transition: border-color ease-out 0.2s;
+      &::after {
+        transform: scale(0);
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-sub);
+        border-radius: 50%;
+        transition: transform ease-out 0.2s;
+      }
+    }
+  }
+
+  // checked
+  &:has(input:checked){
+    .radio-inner {
+      border-color: var(--color-sub);
+      color: var(--color-sub);
+      > i {
+        border-color: var(--color-sub);
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .radio-inner {
+      > i {
+        &::after {
+          top: 5px;
+          left: 5px;
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+  }
+}

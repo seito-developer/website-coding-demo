@@ -1,0 +1,88 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.curriculum {
+  overflow: hidden;
+  .curriculum-header {
+    display: flex;
+    padding: 0 fn.vw(120px);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: fn.vw(75px);
+    > h1 {
+      font-weight: bold;
+      font-size: fn.fs(48px);
+      color: var(--color-main);
+      letter-spacing: .05em;
+    }
+  }
+  .curriculum-contents {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .curriculum-list {
+    overflow: scroll;
+    padding-bottom: fn.vw(85px);
+    scrollbar-color: var(--color-sub) #333;
+    scrollbar-width: thin;
+    padding-right: fn.vw(120px);
+    > li {
+      vertical-align: top;
+      white-space: wrap;
+      display: inline-block;
+      width: fn.vw(772px);
+      margin-right: fn.vw(16px);
+      &:first-child {
+        width: fn.vw(120px);
+        visibility: hidden;
+        margin: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .curriculum-bar-list {
+    > li {
+      margin-bottom: fn.vw(16px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    position: relative;
+    margin-bottom: fn.vw(140px);
+    .curriculum-header {
+      display: block;
+      padding: 0 fn.vw(80px);
+      text-align: center;
+      margin-bottom: fn.vw(75px);
+      > h1 {
+        font-size: fn.fs(24px);
+      }
+    }
+    .curriculum-contents {
+      padding-left: fn.vw(80px);
+    }
+    .curriculum-list {
+      padding-right: fn.vw(80px);
+      padding-bottom: fn.vw(85px);
+      > li {
+        width: 80%;
+        margin-right: fn.vw(40px);
+        &:first-child {
+          display: none;
+          width: fn.vw(180px);
+          height: 100%;
+          margin-right: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<figure class="block">
+  <div class="block-img">
+    <img src="<%= img.url %>" width="<%= img.width %>" height="<%= img.height %>" alt="<%- title %>の図">
+  </div>
+  <figcaption class="block-contents">
+    <dl>
+      <dt><%- title %></dt>
+      <% disc.forEach(discItem => { %>
+        <dd><%- discItem %></dd>
+      <% }) %>
+    </dl>
+  </figcaption>
+</figure>

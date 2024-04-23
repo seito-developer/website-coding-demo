@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/main.scss">
+    <script src="https://kit.fontawesome.com/c1405253c9.js" crossorigin="anonymous"></script>
+    <title><%= title %></title>
+    <meta name="description" content="<%= disc %>">
+
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= common.domain %>">
+    <% 
+    const ogpImg = theme === "theme-siid" ? "/images/ogp-siid.png" : "/images/ogp.png";
+    %>
+    <meta property="og:image" content="<%= ogpImg %>">
+
+    <!-- オプション -->
+    <meta property="og:description" content="<%= disc %>">
+    <meta property="og:site_name" content="<%= common.siteName %>">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- 画像を大きく表示したい場合 -->
+    <meta name="twitter:site" content="@seito_horiguchi"> <!-- サイトのTwitterアカウント -->
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= disc %>">
+    <meta name="twitter:image" content="<%= ogpImg %>">
+    <meta name="twitter:image:alt" content="<%= title %>">
+</head>
+<body class="<%= theme %>">
+<!-- 
+    |ω・`）ﾁﾗ
+
+    |ω・`）...
+
+    |ω・`）< そんなに私のコードが気になるかね？ 
+
+    |彡ｻｯ
+
+-->

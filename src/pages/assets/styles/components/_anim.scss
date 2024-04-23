@@ -1,0 +1,57 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.anim {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  svg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+  }
+  rect,
+  circle,
+  path {
+    stroke-width: 2;
+    fill: transparent;
+  }
+
+  .cls-1 {
+    stroke: var(--color-sub);
+  }
+
+  .cls-3 {
+    stroke: var(--color-main);
+  }
+
+  .cls-4 {
+    stroke: var(--color-main);
+  }
+
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke-width: 1px;
+  }
+
+  .cls-5 {
+    clip-path: transparent;
+  }
+
+  .cls-2,
+  .cls-6 {
+    fill: transparent;
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    svg {
+      height: 100vh;
+      width: auto;
+    }
+  }
+}

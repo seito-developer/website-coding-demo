@@ -1,0 +1,34 @@
+<section class="point">
+<% if(!point.headline.isNormal) { %>
+    <%- include('../modules/components/_headline.html', { modifier: "headline-primary", main: point.headline.main, sub: point.headline.sub }) %>
+<% } else { %>
+  <%- include('../modules/components/_headline-small.html', { 
+    title: point.headline.main,
+    modifier: false,
+    link: false }) %>
+<% } %>
+
+<ul class="point-list">
+<% if( point.cards ) { %>
+  <% for( let index = 0; index < point.cards.length; index++ ) { %>
+    <li>
+      <%- include('../modules/components/_card.html', { 
+        headline: point.cards[index].headline, 
+        img: point.cards[index].img, 
+        disc: point.cards[index].disc }) %>
+    </li>
+  <% } %>
+<% } else { %>
+  <% for( let index = 0; index < point.media.length; index++ ) { %>
+    <li>
+      <%- include('../modules/components/_media.html', { 
+        headline: point.media[index].headline, 
+        img: point.media[index].img, 
+        href: point.media[index].href,
+        disc: point.media[index].disc
+      }) %>
+    </li>
+  <% } %>
+<% } %>
+</ul>
+</section>

@@ -1,0 +1,14 @@
+@use "const" as cn;
+
+@mixin container($height: 100%) {
+  width: 100%;
+  height: $height;
+  display: block;
+  max-width: cn.$site-width;
+  margin: 0 auto;
+}
+
+@mixin font-maven($weight) {
+  font-weight: $weight;
+  font-family: "Maven Pro", "Arial", sans-serif;
+}

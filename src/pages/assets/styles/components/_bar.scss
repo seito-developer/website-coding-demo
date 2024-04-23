@@ -1,0 +1,32 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.bar {
+  display: flex;
+  align-items: center;
+  border-radius: fn.vw(8px);
+  overflow: hidden;
+  font-weight: bold;
+  font-size: fn.fs(20px);
+  > dt {
+    width: 26%;
+    text-align: center;
+    color: #fff;
+    background: var(--color-sub);
+    padding: fn.vw(16px) 0;
+  }
+  > dd {
+    width: 74%;
+    background: #fff;
+    color: var(--color-main);
+    padding: fn.vw(16px) fn.vw(24px);
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    border-radius: fn.vw(16px);
+    > dt, > dd {
+      font-size: fn.fs(12px);
+    }
+  }
+}

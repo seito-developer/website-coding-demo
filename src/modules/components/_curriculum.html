@@ -1,0 +1,27 @@
+<section class="curriculum">
+  <div class="curriculum-container">
+    <div class="curriculum-header">
+      <h1>カリキュラム</h1>
+    </div>
+  </div>
+
+  <div class="curriculum-contents">
+    <ul class="curriculum-list">
+      <li></li>
+      <% for(let i = 0; i < curriculum.contents.length; i++){ %>
+      <li>
+        <ul class="curriculum-bar-list">
+          <% for(let j = 0; j < curriculum.contents[i].length; j++){ %>
+            <li>
+              <%- include('../modules/components/_bar.html', {
+                index: j + 1 + (i * 4),
+                item: curriculum.contents[i][j]
+              }) %>
+            </li>
+          <% } %>
+        </ul>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</section>

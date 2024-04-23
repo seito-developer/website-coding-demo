@@ -1,0 +1,60 @@
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.block {
+  display: flex;
+  align-items: top;
+  background: #333B48;
+  padding: fn.vw(24px);
+  border-radius: fn.vw(8px);
+  .block-img {
+    width: 22.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+    }
+  }
+  .block-contents {
+    padding-left: fn.vw(44px);
+    dt {
+      font-size: fn.fs(24px);
+      color: var(--color-strong);
+      font-weight: bold;
+      margin-bottom: fn.vw(16px);
+    }
+    dd {
+      font-size: fn.fs(16px);
+      position: relative;
+      line-height: 2;
+      padding-left: 1.25em;
+      &::after {
+        content: "";
+        display: block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: .8em;
+      }
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-sm){
+    .block-contents {
+      dt {
+        font-size: fn.fs(12px);
+      }
+      dd {
+        font-size: fn.fs(10px);
+      }
+    } 
+  }
+}

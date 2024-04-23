@@ -1,0 +1,38 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.line {
+  display: flex;
+  .line-img {
+    max-width: fn.vw(150px);
+    height: auto;
+  }
+  .line-text {
+    text-align: left;
+    padding-left: fn.vw(20px);
+    > dt {
+      font-weight: bold;
+      margin-bottom: fn.vw(10px);
+    }
+  }
+
+  @media screen and (max-width: cn.$bp-lg) {
+    align-items: end;
+    .line-img {
+      max-width: 74px;
+      width: 74px;
+      height: 74px;
+    }
+    .line-text {
+      padding-left: fn.vw(20px);
+    }
+  }
+  @media screen and (max-width: cn.$bp-sm){
+    .line-text {
+      padding-left: fn.vw(40px);
+      font-size: fn.fs(12px);
+    }
+  }
+}

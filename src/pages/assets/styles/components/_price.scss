@@ -1,0 +1,61 @@
+// settings
+@use "../const" as cn;
+@use "../function" as fn;
+@use "../mixins" as mixin;
+
+.price {
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #000;
+  padding: fn.vw(20px);
+  margin: fn.vw(20px);
+  > dt {
+    font-size: fn.fs(18px);
+    margin: 0;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 2px;
+      background: var(--color-gray);
+    }
+  }
+  > dd {
+    margin: 0;
+    font-size: fn.fs(14px);
+  }
+  em {
+    font-size: fn.fs(24px);
+    font-style: normal;
+  }
+  br {
+    display: none;
+  }
+
+  @media screen and (max-width: cn.$bp-lg){
+    margin-right: 0;
+    margin-left: 0;
+    > dt {
+      font-size: fn.fs(14px);
+      > span {
+        font-size: fn.fs(10px);
+      }
+    }
+    > dd {
+      margin: 0;
+      font-size: fn.fs(10px);
+    }
+    em {
+      font-size: fn.fs(14px);
+    }
+    br {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<article class="work js-modal-trigger">
+  <div class="work-img">
+    <img src="<%= img %>" alt="<%= headline %> created by <%= author %>">
+  </div>
+  <dl class="work-data">
+    <dt><%= headline %></dt>
+    <dd>制作者：<%= author %>（<%= course %>）</dd>
+  </dl>
+
+  <input name="workImg" type="hidden" value="<%= img %>">
+  <input name="workHeadline" type="hidden" value="<%= headline %>">
+  <input name="workAuthor" type="hidden" value="<%= author %>">
+  <input name="workCourse" type="hidden" value="<%= course %>">
+  <input name="workDesc" type="hidden" value="<%= desc %>">
+  <input name="workTech" type="hidden" value="<%= tech %>">
+</article>

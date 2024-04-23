@@ -1,0 +1,10 @@
+<aside class="contact contact-index">
+  <div class="contact-inner">
+    <h1><%= contact.headline %></h1>
+    <%- include("../modules/components/_link.html", {
+      modifier: "link-contact",
+      href: contact.href,
+      text: contact.text
+    }) %>
+  </div>
+</aside>
