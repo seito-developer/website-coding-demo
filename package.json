@@ -17,7 +17,10 @@
   "dependencies": {
     "animejs": "^3.2.2",
     "browser-sync": "^3.0.2",
+    "eslint": "^9.6.0",
+    "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.12",
+    "prettier": "^3.3.2",
     "vite-plugin-ejs": "^1.7.0"
   }
 }
