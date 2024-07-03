@@ -1,6 +1,6 @@
 {
     "extends": [
-      "eslint:recommended",
+      // "eslint:recommended",
       "eslint-config-prettier"
     ],
     "settings": {
