@@ -1,7 +1,5 @@
-import { common } from "./common";
-import { works } from "./works";
+import { common } from './common';
 
 export const mainData = {
   common: common,
-  works: works,
-}
+};

@@ -1,25 +1,8 @@
-<% 
-const head = {
-  title: common.title.index,
-  disc: common.disc.index,
-};%>
+<% const head = { title: common.title.index, disc: common.disc.index, };%> <%-
+include('../modules/meta/_head.html', head) %> <%-
+include('../modules/layout/_header.html') %>
 
-<%- include('../modules/meta/_head.html', head) %>
-<%- include('../modules/layout/_header.html') %>
-
-<%- include('../modules/components/_hero.html') %>
-
-<main>
-  <%- include('../modules/components/_about.html') %>
-  <%- include('../modules/components/_point.html') %>
-  <%- include('../modules/components/_course.html') %>
-  <%- include('../modules/components/_showcase.html') %>
-  <%- include('../modules/components/_contact.html') %>
-</main>
-
-<%- include('../modules/components/_modal.html') %>
-
-<%- include('../modules/layout/_footer.html', {modifier: "footer-has-contact"}) %>
+<main>Hello world</main>
 
 <script type="module" src="/assets/scripts/index.js"></script>
 <%- include('../modules/meta/_foot.html') %>

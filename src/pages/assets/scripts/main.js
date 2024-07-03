@@ -1,5 +1,1 @@
-import nav from "./modules/nav";
-import { scrollAnimation } from "./modules/scrollAnimation";
-
-nav();
-scrollAnimation();
+console.log("Hello from main.js!");
