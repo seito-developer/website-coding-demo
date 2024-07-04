@@ -1,5 +1,4 @@
 @use "../const" as cn;
-@use "../function" as fn;
 @use "sass:math";
 
 .u-disable {
@@ -17,12 +16,12 @@
   $value: $index * $spacer * 1px;
   $sp-value: math.div($value, 2);
   .u-mb-#{$index * $spacer} {
-    margin-bottom: fn.vw($value);
+    margin-bottom: $value;
   }
   .u-mt-#{$index * $spacer} {
-    margin-bottom: fn.vw($value);
+    margin-bottom: $value;
     @media screen and (max-width: cn.$bp-sm){
-      margin-bottom: fn.vw($sp-value);
+      margin-bottom: $sp-value;
     }
   }
 }

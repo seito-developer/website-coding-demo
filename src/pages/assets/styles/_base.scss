@@ -1,5 +1,4 @@
 @use "const" as cn;
-@use "function" as fn;
 
 :root {
   --color-main: #214a4a;
@@ -18,7 +17,7 @@
 body {
   margin: 0;
   line-height: 1.6;
-  font-size: fn.fs(14px);
+  font-size: 14px;
   font-feature-settings: "palt";
   font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
   font-optical-sizing: auto;
