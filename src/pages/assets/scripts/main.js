@@ -1,1 +1,3 @@
-console.log("Hello from main.js!");
+import { test } from "./modules/test";
+
+test();
