@@ -17,11 +17,14 @@
   $sp-value: math.div($value, 2);
   .u-mb-#{$index * $spacer} {
     margin-bottom: $value;
-  }
-  .u-mt-#{$index * $spacer} {
-    margin-bottom: $value;
     @media screen and (max-width: cn.$bp-sm){
       margin-bottom: $sp-value;
+    }
+  }
+  .u-mt-#{$index * $spacer} {
+    margin-top: $value;
+    @media screen and (max-width: cn.$bp-sm){
+      margin-top: $sp-value;
     }
   }
 }
