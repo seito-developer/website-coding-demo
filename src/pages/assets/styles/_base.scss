@@ -1,18 +1,4 @@
-@use "const" as cn;
-
-:root {
-  --color-main: #214a4a;
-  --color-sub: #289B8F;
-  --color-sub-dark: #248b80;
-  --color-core: #212732;
-  --color-accent: #EE7D2B;
-  --color-accent-dark: #d67026;
-  --color-base: #F4F4F4;
-  --color-strong: #0DD48D;
-  --color-stream: #313948;
-  --color-img-bg: #C5DDDD;
-  --color-gray: #ededed;
-}
+@use "./const" as cn;
 
 body {
   margin: 0;
@@ -22,13 +8,13 @@ body {
   font-family: "Noto Sans JP", "Meiryo", "Arial", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  background: var(--color-base);
+  background: cn.$color-base;
   letter-spacing: .05em;
-  -webkit-tap-highlight-color: var(--color-base);
+  -webkit-tap-highlight-color: cn.$color-base;
 }
 
 ::selection{
-  background: var(--color-main);
+  background: cn.$color-main;
   color: #fff;
 }
 
@@ -55,7 +41,7 @@ a {
 }
 
 em {
-  color: var(--color-sub);
+  color: cn.$color-sub;
   font-style: normal;
   font-weight: bold;
 }
