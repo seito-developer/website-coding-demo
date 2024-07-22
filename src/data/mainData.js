@@ -1,7 +1,15 @@
-import { common } from "./common";
-import { works } from "./works";
-
 export const mainData = {
-  common: common,
-  works: works,
+  common: {
+    siteName: "SiiD Webサイト",
+  },
+  index: {
+    title: "Index Page",
+    desc: "This is the index page.",
+    keywords: "index, home, main",
+  },
+  about: {
+    title: "About Page",
+    desc: "This is the about page.",
+    keywords: "about, us",
+  },
 }
