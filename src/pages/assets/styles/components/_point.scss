@@ -1,40 +1,31 @@
-@use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
-
 .point {
-  padding: fn.vw(160px) fn.vw(120px);
-  color: #fff;
+  padding: 160px 120px;
+}
+.point-list {
+  display: flex;
+  justify-content: center;
+  margin: 80px -12px -12px;
+  width: 100%;
+}
+.point-item {
+  margin: 12px;
+  width: 31%;
+}
+
+@media screen and (max-width: 768px) {
+  .point {
+    padding: 0;
+    margin: 30px 20px 40px;
+  }
   .point-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 20px 0 0;
+    flex-direction: column;
+  }
+  .point-item {
     width: 100%;
-    margin: fn.vw(-12px);
-    margin-top: fn.vw(80px);
-    > li {
-      flex-direction: column;
-      margin: fn.vw(12px);
-      width: 31%;
+    margin: 0 0 20px;
+    &:last-child {
+      margin-bottom: 0;
     }
-  }
-
-  @media screen and (max-width: cn.$bp-sm){
-    padding: fn.vw(160px) fn.vw(80px);
-    .point-list {
-      flex-direction: column;
-      > li {
-        width: 100%;
-        margin-bottom: fn.vw(80px);
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
-    padding-right: fn.vw(40px);
-    padding-left: fn.vw(40px);
   }
 }

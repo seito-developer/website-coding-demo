@@ -1,15 +1,14 @@
 export const mainData = {
   common: {
     siteName: "SiiD Webサイト",
+    domain: "bug-fix.org",
   },
   index: {
-    title: "Index Page",
-    desc: "This is the index page.",
-    keywords: "index, home, main",
+    title: "オンラインのプログラミングスクール「SiiD」 - BugFix LLC",
+    disc: "オンラインのプログラミングスクール「SiiD」では、ゼミ形式でプログラミングやソフトウェア開発の手法をレクチャーします。カジュアルに始められるBasicコースと、ストイックに取り組むCareerコースがあります。",
   },
-  about: {
-    title: "About Page",
-    desc: "This is the about page.",
-    keywords: "about, us",
+  privacyPolicy: {
+    title: "プライバシーポリシー | オンラインのプログラミングスクール「SiiD」",
+    disc: "プライバシーポリシーについて記載したページです。",
   },
-}
+};

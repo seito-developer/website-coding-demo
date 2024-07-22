@@ -1,10 +1,8 @@
 @use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
 
 .headline {
   color: #fff;
-  text-align: center;
+  text-align: left;
   line-height: 1;
   > span {
     display: inline-block;
@@ -21,71 +19,54 @@
       background: #fff;
       transform-origin: right center;
       transform: scaleX(1);
-      transition: transform .25s .25s cubic-bezier(0.28,-0.09, 0.58, 1);
+      transition: transform .25s .25s cubic-bezier(0.28, -0.09, 0.58, 1);
     }
-    &:nth-of-type(1) {
-      font-size: fn.fs(120px);
+    &:nth-of-type(1){
+      font-size: 120px;
       padding: .1em 0;
-      margin-bottom: fn.fs(30px);
-      text-shadow: 0px fn.fs(4px) fn.fs(4px) rgba(0, 0, 0, 0.25);
-      @include mixin.font-maven(600);
+      margin-bottom: 30px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    &:nth-of-type(2) {
-      font-size: fn.fs(18px);
+    &:nth-of-type(2){
+      font-size: 18px;
       font-weight: normal;
     }
   }
 
-  // modifier
-  &.headline-left {
-    text-align: left;
+  // Modifier
+  &.headline-color-main {
+    color: cn.$color-main;
+    > span::after {
+      background: cn.$color-main;
+    }
   }
-  &.headline-primary {
-    color: var(--color-main);
+  &.headline-center {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: cn.$bp-sm){
+  .headline {
+    text-align: center;
     > span {
-      &::after {
-        background: var(--color-main);
+      &:nth-of-type(1){
+        padding: 0;
+        font-size: 60px;
+        margin-bottom: 0;
+      }
+      &:nth-of-type(2){
+        font-size: 14px;
       }
     }
   }
-  &.headline-medium {
-    > span {
-      &:nth-of-type(1) {
-        font-size: fn.fs(80px);
-        margin-bottom: fn.vw(20px);
-      }
-    }
-  }
+}
+
+// Animation style
+.headline {
   &.is-active {
     > span {
       &::after {
         transform: scaleX(0);
-      }
-    }
-  }
-
-  @media screen and (max-width: cn.$bp-sm){
-    > span {
-      &:nth-of-type(1) {
-        font-size: fn.fs(60px);
-        margin-bottom: fn.vw(10px);
-      }
-    }
-
-    &.headline-left {
-      text-align: center;
-    }
-
-    // modifier
-    &.headline-medium {
-      > span {
-        &:nth-of-type(1) {
-          font-size: fn.fs(40px);
-          margin-bottom: -.2em;
-        }
-        &:nth-of-type(2) {
-          font-size: fn.fs(14px);
-        }
       }
     }
   }

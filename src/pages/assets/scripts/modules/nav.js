@@ -1,4 +1,4 @@
-const nav = () => {
+export const nav = () => {
   const $nav = document.querySelector("#js-nav");
   const $navTrigger = document.querySelector("#js-nav-trigger");
   const ACTIVE_CLASS = "is-active";
@@ -9,6 +9,4 @@ const nav = () => {
   };
 
   $navTrigger.addEventListener("click", toggleNav);
-}
-
-export default nav;
+};

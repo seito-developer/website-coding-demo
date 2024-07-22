@@ -1,78 +1,86 @@
 @use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
 
 .showcase {
-  padding: fn.vw(140px) 0 fn.vw(120px);
+  padding: 140px 0 120px;
   overflow: hidden;
-  .showcase-header {
-    padding: 0 fn.vw(120px);
-    margin-bottom: fn.vw(75px);
-  }
-  .showcase-contents {
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .showcase-list {
-    overflow: scroll;
-    padding-bottom: fn.vw(85px);
-    scrollbar-color: var(--color-sub) #333;
-    scrollbar-width: thin;
-    padding-right: fn.vw(120px);
-    > li {
-      vertical-align: top;
-      white-space: wrap;
-      display: inline-block;
-      width: fn.vw(772px);
-      margin-right: fn.vw(16px);
-      &:first-child {
-        width: fn.vw(120px);
-        visibility: hidden;
-        margin: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
+}
+.showcase-header {
+  padding: 0 120px;
+  margin-bottom: 75px;
+}
+.showcase-header-link {
+  line-height: 0;
+}
+.showcase-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showcase-header-headline {
+  font-weight: bold;
+  font-size: 48px;
+  color: cn.$color-main;
+  letter-spacing: .05em;
+}
 
-  @media screen and (max-width: cn.$bp-sm){
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: fn.vw(240px);
-    position: relative;
-    .showcase-header {
-      padding: 0 fn.vw(80px);
-      margin-bottom: fn.vw(75px);
-    }
-    .showcase-contents {
-      padding-left: fn.vw(80px);
-    }
-    .showcase-list {
-      padding-right: fn.vw(80px);
-      padding-bottom: fn.vw(85px);
-      > li {
-        width: 80%;
-        margin-right: fn.vw(40px);
-        &:first-child {
-          display: none;
-          width: fn.vw(180px);
-          height: 100%;
-          margin-right: 0;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
+.showcase-contents {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.showcase-list {
+  overflow: scroll;
+  padding-bottom: 80px;
+  scrollbar-color: cn.$color-sub #333;
+  scrollbar-width: thin;
+  padding-right: 120px;
+}
+.showcase-item {
+  vertical-align: top;
+  white-space: wrap;
+  display: inline-block;
+  width: 772px;
+  margin-right: 16px;
+  &:first-child {
+    width: 120px;
+    visibility: hidden;
+    margin: 0;
   }
-  
-  @media screen and (min-width: cn.$bp-sm) and (max-width: cn.$bp-lg) {
-    .showcase-header {
-      > h1 {
-        font-size: fn.fs(32px);
-      }
-    } 
+  &:last-child {
+    margin-right: 0;
   }
 }
 
+@media screen and (max-width: cn.$bp-sm) {
+  .showcase {
+    padding: 0 0 50px;
+    position: relative;
+    margin: 30px 0 40px;
+  }
+  .showcase-header-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .showcase-header {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .showcase-header-inner {
+    display: block;
+    text-align: center;
+  }
+  .showcase-header-headline {
+    font-size: 24px;
+  }
+  .showcase-list {
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+  .showcase-item {
+    width: 100%;
+    &:first-child {
+      width: 20px;
+    }
+  }
+}

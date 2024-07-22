@@ -1,39 +1,33 @@
 @use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
 
 .contact {
-  margin: 0 fn.vw(120px);
+  margin: 0 120px;
   position: relative;
   z-index: 2;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15);
+  margin-bottom: -145px;
+}
+.contact-inner {
+  text-align: center;
+  background: #fff;
+  padding: 52px 0;
+  border-radius: 8px;
+  > h1 {
+    color: cn.$color-main;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 37px;
+  }
+}
+
+@media screen and (max-width: cn.$bp-sm){
+  .contact {
+    margin: 0 20px;
+  }
   .contact-inner {
-    text-align: center;
-    background: #fff;
-    padding: fn.vw(52px) 0;
-    border-radius: fn.vw(8px);
+    padding: 20px;
     > h1 {
-      color: var(--color-main);
-      font-size: fn.fs(32px);
-      font-weight: bold;
-      margin-bottom: fn.vw(37px);
+      font-size: 24px;
+      margin-bottom: 20px;
     }
   }
-
-  // modifier
-  &.contact-index {
-    margin-bottom: fn.vw(-150px);
-  }
-
-  @media screen and (max-width: cn.$bp-sm){
-    margin: 0 fn.vw(80px);
-    .contact-inner {
-      border-radius: fn.vw(16px);
-      padding-right: fn.vw(80px);
-      padding-left: fn.vw(80px);
-      > h1 {
-        font-size: fn.fs(24px);
-      }
-    }
-  } 
 }

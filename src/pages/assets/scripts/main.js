@@ -1,5 +1,3 @@
-import nav from "./modules/nav";
-import { scrollAnimation } from "./modules/scrollAnimation";
+import { nav } from "./modules/nav";
 
 nav();
-scrollAnimation();

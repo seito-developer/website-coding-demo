@@ -1,133 +1,123 @@
 @use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
 
-@keyframes marquee {
+@keyframes infiniteCarousel {
   0% {
-    transform: translate(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(-50%);
+    transform: translateX(-50%);
   }
 }
 
 .hero {
   width: 100vw;
   height: 100vh;
-  min-height: fn.vw(720px);
+  min-height: 720px;
   max-height: 1000px;
   position: relative;
-  margin-bottom: fn.vw(80px);
   overflow: hidden;
-  .hero-inner {
-    position: absolute;
-    z-index: 2;
-    left: fn.vw(160px);
-    top: 50%;
-    transform: translateY(-50%);
-    margin-top: -5%;
-  }
-  .hero-headline {
-    color: var(--color-main);
-    font-size: fn.fs(24px);
-    letter-spacing: 0.1em;
-  }
-  .hero-headline-text {
-    display: inline-block;
+  margin-bottom: 80px;
+}
+.hero-inner {
+  position: absolute;
+  z-index: 2;
+  left: 160px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -5%;
+}
+.hero-headline {
+  color: cn.$color-main;
+  font-size: 24px;
+  letter-spacing: .1em;
+}
+.hero-headline-text {
+  display: inline-block;
+  position: relative;
+  > span {
+    font-size: 52px;
+    font-weight: bold;
     position: relative;
-    > span {
-      font-size: fn.fs(52px);
-      font-weight: bold;
-      position: relative;
-      display: inline-block;
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        border-bottom: 2px solid var(--color-main);
-        position: absolute;
-        left: 0;
-        bottom: 0.1em;
-      }
-    }
+    display: inline-block;
     &::after {
       content: "";
       display: block;
       width: 100%;
-      height: 100%;
+      border-bottom: 2px solid cn.$color-main;
       position: absolute;
       left: 0;
-      top: 0;
-      background: var(--color-main);
-      transform-origin: right center;
-      transform: scaleX(1);
-      transition: transform .25s .25s cubic-bezier(0.28,-0.09, 0.58, 1);
+      bottom: .1em;
     }
   }
-  .hero-images {
+  &::after {
+    content: "";
+    display: block;
     width: 100%;
-    position: absolute;
-    z-index: 2;
-    bottom: -1vw;
-    left: 0;
-  }
-  .hero-images-list {
-    white-space: nowrap;
-    animation: marquee 60s linear infinite;
-  }
-  .hero-images-item {
     height: 100%;
-    display: inline-block;
-    margin: 0 5px;
-    > img {
-      width: auto;
-      height: fn.vw(286px);
-    }
-  }
-  .hero-animation {
-    opacity: 0;
     position: absolute;
-    z-index: 1;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: rotateY(-180deg);
-    > svg {
-      width: 100%;
-      height: 100%;
+    background: cn.$color-main;
+    transform-origin: right center;
+    transform: scaleX(1);
+    transition: transform .25s .25s cubic-bezier(0.28, -0.09, 0.58, 1);
+  }
+}
+.hero-images {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  bottom: -1vw;
+  left: 0;
+}
+.hero-images-list {
+  white-space: nowrap;
+  animation: infiniteCarousel 60s linear infinite;
+}
+.hero-images-item {
+  height: 100%;
+  display: inline-block;
+  margin: 0 5px;
+  > img {
+    width: auto;
+    height: 286px;
+  }
+}
+
+@media screen and (max-width: cn.$bp-sm){
+  .hero {
+    margin-bottom: 40px;
+  }
+  .hero-inner {
+    left: 0;
+    width: 100%;
+  }
+  .hero-headline {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  .hero-headline-text {
+    > span {
+      display: block;
+      font-size: 32px;
+      white-space: nowrap;
+      &::after {
+        display: none;
+      }
     }
   }
+  .hero-images-item > img {
+    height: 143px;
+  }
+}
 
-  // modifier
+// Animation style
+.hero-headline {
   &.is-active {
     .hero-headline-text {
       &::after {
         transform: scaleX(0);
-      }
-    }
-  }
-
-  @media screen and (max-width: cn.$bp-sm){
-    .hero-inner {
-      left: 0;
-      width: 100%;
-    }
-    .hero-headline {
-      width: 100%;
-      text-align: center;
-      color: var(--color-main);
-      font-size: fn.fs(14px);
-      letter-spacing: 0.1em;
-    }
-    .hero-headline-text {
-      > span {
-        display: block;
-        font-size: fn.fs(32px);
-        white-space: nowrap;
-        &::after{
-          display: none;
-        }
       }
     }
   }

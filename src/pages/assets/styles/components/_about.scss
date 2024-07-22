@@ -1,54 +1,58 @@
-// settings
 @use "../const" as cn;
-@use "../function" as fn;
-@use "../mixins" as mixin;
 
 .about {
-  padding: fn.vw(160px);
-  border-radius: fn.vw(20px);
-  margin: 0 fn.vw(16px);
+  padding: 160px;
+  border-radius: 20px;
+  margin: 16px;
   color: #fff;
-  background: var(--color-core);
+  background: cn.$color-core;
   position: relative;
   overflow: hidden;
+}
+.about-container {
+  margin-bottom: 60px;
+}
+.about-disc {
+  margin: 80px 0;
+  p {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: .25em;
+    margin-top: 0;
+    margin-bottom: 38px;
+  }
+}
+.about-bottom {
+  color: cn.$color-stream;
+  font-size: 124px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: cn.$bp-sm){
+  .about {
+    padding: 30px 20px 20px;
+    margin: 0 20px;
+  }
   .about-container {
-    margin-bottom: fn.vw(60px);
+    margin-bottom: 70px;
   }
   .about-disc {
-    margin: fn.vw(80px) 0;
+    margin: 20px 0 40px;
     > p {
-      font-size: fn.vw(24px);
-      line-height: 1.5;
-      letter-spacing: .25em;
-      margin-top: 0;
-      margin-bottom: fn.vw(38px);
+      font-size: 14px;
+      margin-bottom: 17px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   .about-bottom {
-    color: var(--color-stream);
-    @include mixin.font-maven(400);
-    font-size: fn.vw(124px);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    white-space: nowrap;
-  }
-
-
-  @media screen and (max-width: cn.$bp-sm){
-    padding-right: fn.vw(60px);
-    padding-left: fn.vw(60px);
-
-    .about-disc {
-      margin: fn.vw(100px) 0;
-      > p {
-        font-size: fn.fs(14px);
-        margin-bottom: fn.vw(50px);
-      }
-    }
-    .about-container {
-      margin-bottom: fn.vw(160px);
-    }
+    color: cn.$color-stream;
+    font-size: 62px;
   }
 }
+

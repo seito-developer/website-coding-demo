@@ -7,26 +7,24 @@
 @use "layout/footer";
 
 // components
-@use "components/anim";
-@use "components/about";
-@use "components/card";
-@use "components/contact";
-@use "components/course";
-@use "components/headline";
-@use "components/hero";
-@use "components/link";
 @use "components/nav";
+@use "components/link";
+@use "components/hero";
+@use "components/headline";
+@use "components/card";
 @use "components/panel";
-@use "components/point";
-@use "components/showcase";
 @use "components/work";
-@use "components/trigger";
-@use "components/modal";
+@use "components/contact";
 @use "components/line";
+@use "components/trigger";
+@use "components/animation";
 @use "components/sub-hero";
-@use "components/headline-small";
-@use "components/jicoo";
-@use "components/docs";
+@use "components/privacy-policy";
+
+@use "components/about";
+@use "components/point";
+@use "components/course";
+@use "components/showcase";
 
 // utilities
 @use "utilities/utilities";

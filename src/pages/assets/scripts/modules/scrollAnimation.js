@@ -1,25 +1,21 @@
 export const scrollAnimation = () => {
-  const $headlines = document.querySelectorAll(".js-scroll-animation");
+  const $scrollAnimationEls = document.querySelectorAll(".js-scroll-animation");
   const ACTIVE_CLASS = "is-active";
 
-  const addActiveClass = (target) => {
-    target.classList.add(ACTIVE_CLASS);
-  };
-
-  const removeActiveClass = (target) => {
-    target.classList.remove(ACTIVE_CLASS);
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        addActiveClass(entry.target);
-      } else {
-        removeActiveClass(entry.target);
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // 画面内
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add(ACTIVE_CLASS);
+      }
+      // 画面外
+      else {
+        entry.target.classList.remove(ACTIVE_CLASS);
       }
     });
-  }, { threshold: 0.5 });
+  });
 
-  // 監視を開始
-  $headlines.forEach($headline => observer.observe($headline));
+  $scrollAnimationEls.forEach((el) => {
+    intersectionObserver.observe(el);
+  });
 };

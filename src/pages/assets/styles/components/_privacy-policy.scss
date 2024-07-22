@@ -1,0 +1,44 @@
+@use "../const" as cn;
+
+.privacy-policy {
+  padding: 0 120px 120px;
+  section {
+    font-size: 16px;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {}
+  ul {
+    > li {
+      list-style: disc;
+      margin-left: 1.35em;
+    }
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  address {
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: cn.$bp-sm) {
+  .privacy-policy {
+    padding: 0 20px 20px;
+    margin-bottom: 60px;
+
+    section {
+      margin-bottom: 40px;
+    }
+  }
+}

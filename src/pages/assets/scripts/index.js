@@ -1,5 +1,5 @@
-import { hero } from "./modules/hero";
-import { stream } from "./modules/stream";
+import { heroAnimation } from "./modules/heroAnimation";
+import { scrollAnimation } from "./modules/scrollAnimation";
 
-hero();
-stream();
+scrollAnimation();
+heroAnimation();
